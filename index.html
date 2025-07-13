@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DomoHome Hermosillo</title>
+
+  <!-- SEO y Preview NFC/social -->
+  <meta property="og:title" content="DomoHome Hermosillo - Automatización Inteligente">
+  <meta property="og:description" content="Automatización, confort y seguridad para tu hogar u oficina.">
+  <meta property="og:image" content="https://i.imgur.com/nnO7uBN.png">
+  <meta property="og:url" content="https://domohome.mx">
+  <meta name="theme-color" content="#34495e">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.imgur.com/nnO7uBN.png" type="image/png">
+
+  <!-- Fuentes y iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(52, 73, 94, 0.7);
+      z-index: -2;
+    }
+
+    .top-left-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 150px;
+      z-index: 10;
+    }
+
+    .floating-text {
+      position: fixed;
+      bottom: 5%;
+      left: 5%;
+      z-index: 0;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      line-height: 1.2;
+      max-width: 400px;
+    }
+
+    .floating-text p {
+      margin: 0;
+      font-size: 3.5vw;
+      font-weight: bold;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+      color: white;
+      animation: fadeInUp 0.8s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 15px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    p {
+      color: #e0e0e0;
+      margin-bottom: 25px;
+    }
+
+    .redes {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .redes a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: white;
+      transition: transform 0.2s ease;
+    }
+
+    .redes a:hover {
+      transform: scale(1.05);
+    }
+
+    .instagram { background-color: #e1306c; }
+    .web       { background-color: #34495e; }
+    .whatsapp  { background-color: #25D366; }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #cccccc;
+    }
+
+    @media (max-width: 992px) {
+      .floating-text {
+        font-size: 2.5vw;
+        bottom: 3%;
+        left: 3%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .floating-text {
+        font-size: 2em;
+        bottom: 20px;
+        left: 20px;
+        max-width: 90%;
+      }
+      .floating-text p {
+        font-size: 1.5em;
+      }
+      .top-left-logo {
+        width: 100px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 15px;
+        max-width: 95%;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .logo {
+        width: 90px;
+      }
+      .floating-text p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/vOUoMyF.jpeg" alt="Fondo Domohome" class="background-image">
+  <div class="background-overlay"></div>
+  <img src="https://i.imgur.com/nnO7uBN.png" alt="Logo Domohome Superior" class="top-left-logo">
+
+  <div class="floating-text">
+    <p>Tu casa</p>
+    <p>no solo es inteligente.</p>
+    <p>Te entiende.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.imgur.com/nnO7uBN.png" alt="Logo Domohome" class="logo">
+    <h1>DomoHome Hermosillo</h1>
+    <p>Expertos en automatización, confort y seguridad para tu hogar u oficina.</p>
+
+    <div class="redes">
+      <a href="https://www.instagram.com/domohome.mx/" class="instagram" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram Oficial
+      </a>
+      <a href="https://domohome.mx/" class="web" target="_blank">
+        <i class="fas fa-globe"></i> Página Web
+      </a>
+      <a href="https://wa.me/5216621234567" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+      </a>
+    </div>
+
+    <footer>&copy; 2025 DomoHome Hermosillo</footer>
+  </div>
+</body>
+</html>
